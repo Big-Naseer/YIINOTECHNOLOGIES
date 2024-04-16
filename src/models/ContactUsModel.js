@@ -11,7 +11,8 @@ const messageSchema = new Schema({
         required: true,
     },
     phoneNumber:{
-        type: String
+        type: Number,
+        required: true,
     },
     address:{
         type: String,
@@ -21,6 +22,10 @@ const messageSchema = new Schema({
         type: String,
         required: true,
     }
-});
+},
+{
+    timestamps: true,
+}
+);
 
 export default model('ContactUs', messageSchema)
